@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="./src/images/favicon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./src/assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./src/assets/font-awesome/css/font-awesome.css">
+
+    <!-- src/css -->
+    <link rel="stylesheet" href="./src/css/main.css">
+
+    <title>Admin</title>
+</head>
+
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="h-100 mb-4">
+            <h3 class="masthead-brand d-flex align-items-center justify-content-center">
+                <img src="./src/images/logo.svg" alt="logo" class="mx-2">
+                Group D
+            </h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="index.html">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <img class="mb-2" src="./src/images/logo.svg" alt="logo" width="72" height="72">
+                    <h1 class="cover-heading">Administrative Portal</h1>
+                </div>
+            </div>
+            <div class="row mt-3 mt-md-4">
+                <div class="col-12 col-md-3">
+                    <a href="#" id="selectUserProfileIcon"><i class="fa fa-user-circle-o fa-5x font-weight"></i>
+                        <br>
+                        <span class="font-weight-bold">User Profiles</span>
+                    </a>
+
+                </div>
+                <div class="col-12 col-md-3">
+                    <a href="#" id="selectParkingSpaceIcon"><i class="fa fa-car fa-5x"></i>
+                        <br>
+                        <span class="font-weight-bold">Modify Spaces</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-3">
+                    <a href="rptRevenue.html"><i class="fa fa-money fa-5x"></i>
+                        <br>
+                        <span class="font-weight-bold">Revenue Reports</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-3">
+                    <a href="#" id="adjustPaymentRateIcon"><i class="fa fa-dollar fa-5x"></i>
+                        <br>
+                        <span class="font-weight-bold">Parking Rate</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="modalIncludes">
+            <div id="selectUserModal"></div>
+            <div id="selectSpaceModal"></div>
+            <div id="adjustPaymentRateModal"></div>
+        </div>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner my-4">
+            <p class="mb-0">&#169; Group D - CSCI 441 VB</p>
+        </div>
+    </footer>
+</div>
+
+<!-- jQuery, Popper.JS, Bootstrap JS -->
+<script src="./src/assets/jquery/jquery-3.5.1.min.js"></script>
+<script src="./src/assets/popper/popper.min.js"></script>
+<script src="./src/assets/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- src/js -->
+<script src="./src/js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../src/images/favicon.svg" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/src/assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- src/css -->
+    <link rel="stylesheet" href="../src/css/main.css" />
+
+    <title>Parking Garage Automation</title>
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="h-100 mb-4">
+          <h3
+            class="masthead-brand d-flex align-items-center justify-content-center"
+          >
+            <img src="../src/images/logo.svg" alt="logo" class="mx-2" />
+            Group D
+          </h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="/">Home</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <div class="text-center">
+          <p>Please select the store you are visiting and time of visit</p>
+        <form class="form-reservation">
+          <label for="inputStore" class="sr-only">Store</label>
+          <select name="stores" id="storeSelector" class="form-control">
+            <option value="109">Store 1</option>
+            <option value="209">Store 2</option>
+            <option value="309">Store 3</option>
+            <option value="409">Store 4</option>
+          </select>
+          <label for="inputDateTime" class="sr-only">Reservation Date and Time</label>
+          <input type="datetime-local" id="reservationTime" name="reservationTime" class=form-control>
+
+          <button
+            id="reservationButtton"
+            class="btn btn-lg btn-outline-primary btn-block"
+
+          >
+            Make Reservation
+          </button>
+        </form>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner my-4">
+          <p class="mb-0">&#169; Group D - CSCI 441 VB</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- jQuery, Popper.JS, Bootstrap JS -->
+    <script src="/src/assets/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/src/assets/popper/popper.min.js"></script>
+    <script src="/src/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- src/js -->
+    <script src="../src/js/reservation.js"></script>
+  </body>
+</html>

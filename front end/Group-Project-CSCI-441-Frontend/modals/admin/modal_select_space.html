@@ -1,0 +1,36 @@
+<div class="modal fade" id="select_space_modal" style="top:30% !important" tabindex="-1" role="dialog"
+     aria-labelledby="select_space_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100">Select Parking Space to View</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" id="userContent">
+                <form name="spaceSelectionFromModal" id="spaceSelectionFromModal" action="#" method="get">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-10 text-center">
+                            <select class="form-control" name="spaceFromModal" id="spaceFromModal">
+                                <option selected>Select a Parking Space</option>
+                                <option value="1">A1 - Available</option>
+                                <option value="2">A2 - Occupied</option>
+                                <option value="3">B6 - Closed</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-outline-primary btn-form display-4" id="rr_modal_select_space">
+                            Select Space
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

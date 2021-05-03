@@ -1,0 +1,33 @@
+<div class="modal fade" id="select_user_modal" style="top:30% !important" tabindex="-1" role="dialog"
+     aria-labelledby="select_user_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100">Select User to View</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" id="userContent">
+                <form name="userSelectionFromModal" id="userSelectionFromModal" action="#" method="get">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-10 text-center">
+                            <select class="form-control" name="user" id="selectUserModalDropdown">
+                                <option selected>Select a User</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-outline-primary btn-form display-4 userButton" id="rr_modal_select_user">
+                            Select User
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

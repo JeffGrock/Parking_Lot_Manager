@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="./src/images/favicon.svg">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./src/assets/bootstrap/css/bootstrap.min.css">
+
+  <!-- src/css -->
+  <link rel="stylesheet" href="./src/css/main.css">
+
+  <title>Parking Garage Automation</title>
+</head>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    <!-- Header -->
+    <header class="masthead mb-auto">
+      <div class="h-100 mb-4">
+        <h3 class="masthead-brand d-flex align-items-center justify-content-center">
+          <img src="./src/images/logo.svg" alt="logo" class="mx-2">
+          Group D
+        </h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="./">Home</a>
+          <a class="nav-link" href="./login.html">Login</a>
+          <a class="nav-link active" href="./signup.html">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover">
+
+      <div class="text-center">
+        <img class="mb-2" src="./src/images/logo.svg" alt="logo" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+      </div>
+
+      <form class="form_signup" action="/signup" method="POST">
+
+        <!-- Account Registration -->
+        <div class="card mb-2 registrationSection" id="profileSection">
+          <div class="card-header">Account Information</div>
+          <div class="card-body">
+            <!-- Email -->
+            <div class="form-group">
+              <label for="input_email">Email</label>
+              <input type="email" autocomplete="off" class="form-control" name="email" id="input_email"
+                placeholder="John.Smith@example.com" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="input_password">Password</label>
+                <input type="password" autocomplete="off" class="form-control" name="password" id="input_password"
+                  placeholder="Password" minlength="8" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="input_confirmPassword">Confirm Password</label>
+                <input type="password" autocomplete="off" class="form-control" name="confirmPassword"
+                  id="input_confirmPassword" placeholder="Confirm Password" minlength="8" required>
+              </div>
+            </div>
+
+            <!-- Name -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="input_firstName">First Name</label>
+                <input type="text" class="form-control" name="firstName" id="input_firstName" placeholder="John"
+                  required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="input_lastName">Last Name</label>
+                <input type="text" class="form-control" name="lastName" id="input_lastName" placeholder="Smith"
+                  required>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="form-group">
+              <label for="input_phone">Phone Number</label>
+              <input type="tel" class="form-control" id="input_phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890">
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle Registration -->
+        <div class="card mb-2 registrationSection" id="vehiclesSection">
+          <div class="card-header">Vehicles Information</div>
+          <div>
+            <div class="card-body row">
+
+              <!-- License Plate # Input -->
+              <div class="col-sm my-2">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="licensePlate" id="input_licensePlate"
+                    pattern="[a-zA-Z0-9]{1,7}" placeholder="Enter License Plate">
+                  <div class="invalid-feedback invalidLicensePlate">
+                    License Plate already exists.
+                  </div>
+                </div>
+
+                <div>
+                  <a href="" class="btn btn-outline-primary btn-block btn-sm btn_addVehicle" role="button">Add
+                    Vehicle</a>
+                </div>
+              </div>
+
+              <!-- License Plates List -->
+              <div class="col-sm my-2">
+                <ul class="list-group" id="list_vehicles">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Registration -->
+        <div class="card mb-2 registrationSection" id="paymentMethodSection">
+          <div class="card-header">Payment Method Information</div>
+          <div>
+            <div class="card-body">
+
+              <!-- Payment Information Input -->
+              <div class="my-2">
+                <!-- Card Holder's Name -->
+                <div class="form-group">
+                  <label for="input_cardName">
+                    <h6>Card Holder's Name</h6>
+                  </label>
+                  <input type="text" id="input_cardName" name="cardName" placeholder="John Smith" class="form-control">
+                </div>
+
+                <!-- Card Number -->
+                <div class="form-group">
+                  <label for="input_cardNumber">
+                    <h6>Card Number</h6>
+                  </label>
+                  <input type="text" id="input_cardNumber" name="cardNumber" placeholder="Valid card number"
+                    pattern="(\d{4}[-. ]?){4}|\d{4}[-. ]?\d{6}[-. ]?\d{5}" class="form-control">
+                </div>
+
+                <!-- Exp and CVV -->
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="form-group">
+                      <label>
+                        <h6>Expiration Date</h6>
+                      </label>
+                      <div class="input-group">
+                        <label for="input_expMM"></label>
+                        <input type="number" id="input_expMM" placeholder="MM" name="expMM" class="form-control" min="1"
+                          max="12" step="1">
+                        <label for="input_expYY"></label>
+                        <input type="number" id="input_expYY" placeholder="YY" name="expYY" class="form-control"
+                          max="99" step="1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group mb-4">
+                      <label for="input_cvv">
+                        <h6>CVV</h6>
+                      </label>
+                      <input type="text" id="input_cvv" placeholder="123" name="cvv" class="form-control"
+                        pattern="^\d{3,4}$">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="card registrationSection" id="completeRegistrationSection">
+          <div class="card-header">
+            Complete Registration
+          </div>
+          <div>
+            <div class="card-body">
+              <p>By creating an account, you agree to the Terms of Service.</p>
+              <button type="submit" class="btn btn-outline-primary btn_submitForm">Create Account</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mastfoot mt-auto text-center">
+      <div class="inner my-4">
+        <p class="mb-0">&#169; Group D - CSCI 441 VB</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- jQuery, Popper.JS, Bootstrap JS -->
+  <script src="./src/assets/jquery/jquery-3.5.1.min.js"></script>
+  <script src="./src/assets/popper/popper.min.js"></script>
+  <script src="./src/assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- src/js -->
+  <script src="./src/js/utils.js"></script>
+  <script src="./src/js/components/MyProfile.js"></script>
+  <script src="./src/js/components/MyVehicles.js"></script>
+  <script src="./src/js/components/MyPaymentMethod.js"></script>
+  <script src="./src/js/signup.js"></script>
+
+</body>
+
+</html>

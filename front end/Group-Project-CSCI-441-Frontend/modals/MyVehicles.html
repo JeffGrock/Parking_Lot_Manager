@@ -1,0 +1,28 @@
+<div class="card mb-2 registrationSection" id="vehiclesSection">
+  <div>
+    <div class="card-body row">
+
+      <!-- License Plate # Input -->
+      <div class="col-sm my-2">
+        <div class="form-group">
+          <input type="text" class="form-control" name="licensePlate" id="input_licensePlate"
+            pattern="[a-zA-Z0-9]{1,7}" placeholder="Enter License Plate">
+          <div class="invalid-feedback invalidLicensePlate">
+            License Plate already exists.
+          </div>
+        </div>
+
+        <div>
+          <a href="" class="btn btn-outline-primary btn-block btn-sm btn_addVehicle" role="button">Add
+            Vehicle</a>
+        </div>
+      </div>
+
+      <!-- License Plates List -->
+      <div class="col-sm my-2">
+        <ul class="list-group" id="list_vehicles">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

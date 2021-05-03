@@ -1,0 +1,45 @@
+<div class="card mb-2 registrationSection" id="profileSection">
+    <div class="card-body">
+        <!-- Email -->
+        <div class="form-group">
+            <label for="input_email">Email</label>
+            <input type="email" autocomplete="off" class="form-control" name="email" id="input_email"
+                placeholder="John.Smith@example.com" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="input_password">Password</label>
+                <input type="password" autocomplete="off" class="form-control" name="password" id="input_password"
+                    placeholder="Password" minlength="8">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="input_confirmPassword">Confirm Password</label>
+                <input type="password" autocomplete="off" class="form-control" name="confirmPassword"
+                    id="input_confirmPassword" placeholder="Confirm Password" minlength="8">
+            </div>
+        </div>
+
+        <!-- Name -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="input_firstName">First Name</label>
+                <input type="text" class="form-control" name="firstName" id="input_firstName" placeholder="John"
+                    required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="input_lastName">Last Name</label>
+                <input type="text" class="form-control" name="lastName" id="input_lastName" placeholder="Smith"
+                    required>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="form-group">
+            <label for="input_phone">Phone Number</label>
+            <input type="tel" class="form-control" id="input_phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890">
+        </div>
+    </div>
+</div>
